@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.9;
+    color: #333;
+    border: solid 20px #2c3e50;
+    background-color: #fad7a7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo */
+a.logo {
+    float: left;
+    margin-top: 50px;
+}
+
+a.logo img {
+    width: 90px;
+    height: auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2c3e50;
+    border: none;
+    height: 40px;
+    padding: 10px 0;
+    position: fixed; /* Para que permanezca en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: top 0.3s ease; /* Transición suave para desaparecer/reaparecer */
+}
+
+.navbar.hidden {
+    top: -60px; /* Desaparece moviéndose hacia arriba */
+}
+
+.navbar-brand {
+    color: #fad7a7 !important;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.navbar-nav li a {
+    color: #000000 !important;
+    font-size: 1.1em;
+    padding-top: 15px;
+}
+
+.navbar-toggle {
+    background-color: #fad7a7;
+    border: none;
+    margin-top: 15px;
+}
+
+/* Sombra cuando la página se desplaza */
+.navbar.scrolled {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Header Section */
+.intro-header {
+    height: 400px; /* Altura de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding-top: 80px; /* Agrega margen superior para que el contenido no quede cubierto por la barra */
+    text-align: center;
+}
+
+
+.site-heading h1 {
+    font-family: 'Lora', serif;
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 120px;
+    color: #9fb478;
+}
+
+.site-heading .subheading {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+}
+
+.about h2 {
+    font-family: 'Lora', serif;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.para p {
+    font-size: 1.1em;
+    margin: 0 0 20px;
+    text-align: justify;
+}
+
+/* Post Preview */
+.post-preview {
+    margin-bottom: 40px;
+}
+
+.post-preview a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.post-preview a:hover {
+    color: #914F1E;
+}
+
+.post-preview .post-title {
+    font-family: 'Lora', serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.post-preview .post-subtitle {
+    font-size: 1.3em;
+}
+
+.post-meta {
+    color: #999999;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #626F47;
+    padding: 4px 0;
+}
+
+footer .list-inline > li > a {
+    color: #D8B4F8;
+}
+
+footer .list-inline > li > a:hover {
+    color: #FFC7EA;
+}
+
+footer .copyright {
+    margin-top: 20px;
+}
+
+footer img {
+    margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .intro-header {
+        height: 300px;
+    }
+
+    .site-heading h1 {
+        font-size: 3em;
+        padding-top: 100px;
+    }
+}
+
+.btn-sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduce el espacio entre los botones */
+    z-index: 1000;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.5s ease; /* Transición suave para la aparición */
+}
+
+.btn-sidebar a {
+    padding: 5px 5px; /* Botones más pequeños */
+    background-color: #113946;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-sidebar a:hover {
+    background-color: #fad7a7;
+    color: rgb(0, 0, 0);
+}
+
+.btn-sidebar.visible {
+    opacity: 1; /* Muestra los botones */
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor y Descarga de PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .pdf-container {
+            width: 80%;
+            max-width: 600px;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+            position: relative;
+        }
+        .pdf-preview {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        .view-more {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .view-more:hover {
+            background-color: #45a049;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #f44336;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+        }
+        .download-btn:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Visor y Descarga de PDF</h1>
+
+    <div class="pdf-container">
+        <!-- Vista previa del PDF -->
+        <embed src="d:\Campo Página\startbootstrap-clean-blog-gh-pages\documento.pdf" type="application/pdf" class="pdf-preview">
+
+        <!-- Enlace para ver en pantalla completa -->
+        <a href="d:\Campo Página\startbootstrap-clean-blog-gh-pages\documento.pdf" class="view-more" target="_blank">Ver en pantalla completa</a>
+    </div>
+    
+    <!-- Botón para descargar el PDF -->
+    <a href="d:\Campo Página\startbootstrap-clean-blog-gh-pages\documento.pdf" download="archivo.pdf" class="download-btn">Descargar PDF</a>
+
+</body>
+</html>
